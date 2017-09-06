@@ -1,0 +1,414 @@
+//variables
+$accentColor: #cd2b2e;
+
+//reset
+* {
+	margin: 0;
+	padding: 0;
+}
+//code
+
+
+ nav {	
+ 	width: 100%;
+	padding: 0px !important;
+	margin-bottom: 0px !important;
+	background: none !important;
+	position: fixed !important;
+	border-style:none !important;
+	z-index:999;
+	ul a { 
+	padding-right:40px !important;
+	color: #fff !important; 
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	}
+	a:hover {
+		color: $accentColor !important;
+		transition: all 0.5s ease;
+	}
+	.logo {
+		color: $accentColor !important;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400;
+		font-size: 2em;
+	}
+}
+
+
+nav.scrolled {
+	background: rgba(black, 0.9) !important;
+	  transition: background-color 400ms linear;
+}
+
+
+.main-img-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+
+}
+
+
+	#image {
+	width: 100%;
+    left:0;
+    top:0;
+	}
+
+@mixin heroText($size, $weight, $top) {
+	width: 100%;
+	z-index:100;
+	text-align: center;
+    position:absolute;    
+    color:white;
+    font-size: $size;
+    font-family: 'Lato', sans-serif;
+    font-weight: $weight;
+    top: $top;
+}
+
+
+.h1-text 
+{	
+	@include heroText(48px, 700, 37%);
+}
+
+.text 
+{
+	@include heroText(26px, 400, 32%);
+	 font-family: 'Open Sans', sans-serif;
+}
+
+.text2
+{
+	@include heroText(26px, 400, 57%);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+		@include heroText(14px, 700, 70%);
+		width: 200px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		left:44%;
+		background: none;
+		border: 2px solid #fff;
+		box-shadow: none;
+
+}
+
+	.button:hover {
+		color: $accentColor;
+		border: 2px solid $accentColor;
+		 transition: all 0.5s ease;
+	}
+
+@mixin sectionTitle {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	color: #333333;
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+	margin: 30px 0 30px 0;
+}	
+
+.products-section {
+	max-width: 1110px;
+	height: auto;
+	text-align: center;
+	  padding: 0 !important;
+    
+}
+
+#products-text {
+	@include sectionTitle;
+		font-weight: 300;
+}
+
+
+.products-container {
+	max-width: 1080px;
+	margin-bottom:30px;
+}
+
+.container-fluid{
+  height:auto;
+  display:table;
+  width: 100%;
+
+
+}
+ 
+.row-fluid {
+	height: auto; 
+	display:table-cell; 
+	vertical-align: middle;
+}
+
+
+@mixin productContainer {
+	top:50%;
+	color:white;
+	height: 370px !important;
+	margin: 15px;
+	width: 330px !important;
+	background-size: cover;
+	outline: 2px solid #fff;
+	outline-offset: -25px;
+}
+
+@mixin promoContainer {
+	text-align:center;
+	color:white;
+	height: 370px !important;
+	margin: 15px;
+	width: 510px !important;
+	background-size: cover;
+}
+
+@mixin promoText{
+			font-family: 'Lato', sans-serif;
+			font-weight: 900;
+			font-size: 32px;
+}
+
+
+@mixin prodText{
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-style: italic;
+			font-size: 32px;
+			margin-top: 150px;
+}
+
+
+@mixin productAnimation {
+        color:$accentColor;
+		transform: scale(1.05);
+        outline: 2px solid $accentColor;
+        transition: all 0.5s ease;
+}
+
+.prod-images1 {
+	@include productContainer;
+	background:linear-gradient(
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)), url('../images/prod1.jpg');
+	p {
+		@include prodText;
+	}
+	 &:hover {
+        @include productAnimation;
+    }
+
+
+}
+
+
+.prod-images2 {
+	@include productContainer;
+	background:linear-gradient(
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)), url('../images/prod2.jpg');
+    	p {
+		@include prodText;
+	}
+		 &:hover {
+			@include productAnimation;
+    	}
+}
+
+.prod-images3 {
+	@include productContainer;
+	background:linear-gradient(
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)), url('../images/prod3.jpg');
+    	p {
+		@include prodText;
+	}
+
+    	 &:hover {
+			@include productAnimation;
+    	}
+}
+
+
+.promo-prod1 {
+	@include promoContainer;
+		background:linear-gradient(
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)), url('../images/prod4.jpg');
+		p{
+			@include promoText;
+		}
+		hr{ 
+			align: center !important;
+			margin: 10px auto 10px auto !important;
+			width: 100px !important;
+			border-top: 2px solid #fff !important;
+		}
+		    	 &:hover {
+			@include productAnimation;
+			outline: none;
+    	}
+}
+
+
+.promo-text {
+	margin-top: 110px;
+}
+
+.promo-prod2 {
+	@include promoContainer;
+		background: linear-gradient(
+    rgba(0,0,0, 0.7),
+    rgba(0,0,0, 0.7)), url('../images/prod5.jpg');
+		p{
+			@include promoText;
+		}
+
+		hr{ 
+			align: center !important;
+			margin: 10px auto 10px auto !important;
+			width: 100px !important;
+			border-top: 2px solid #fff !important;
+		}
+		    	 &:hover {
+			@include productAnimation;
+			outline: none;
+    	}
+}
+
+
+
+.trending {
+	width:100%;
+	min-height:800px;
+	background: url('../images/bg-trending.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.trending-preview {
+	max-width: 1080px;
+	margin:auto !important;
+	padding-left: 15px !important;
+}
+
+
+
+	.trending-img{
+		background: url('../images/trending1.jpg');
+		background-size: cover;
+		max-width: 510px;
+		height: 550px;
+
+		margin:15px 15px 15px 0;
+	}
+
+	.trending-text {
+		max-width: 510px;
+		padding-left: 0 !important;
+		margin-left: 15px;
+		margin-top: 15px;
+		h4 {
+			font-family: 'Lato', sans-serif;
+			font-size: 25px;
+			font-weight: 700;
+			color: $accentColor;
+		}
+		p{
+			color: #777777;
+			font-family: 'Lato', sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+		}
+	}
+
+	.sizes {	
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 18px;
+		font-weight: 700;
+		color: #777777;
+		p {	
+		margin:50px 0 5px 0;
+		padding:10px 10px 10px 10px;
+		border-style: solid none;
+		border-width:1px;
+		&:hover{
+				text-decoration: none;	
+				 color: #fff;
+				 background: #777;
+			     transition: all 0.5s ease;
+			     border-color: #777;
+
+				}
+			}
+		}
+
+.blog {
+		width:100%;
+		min-height:800px;
+			.blog-container {
+				max-width: 1080px;
+				height: 800px;
+				h4 {
+					font-family: 'Lato', sans-serif;
+					font-size: 25px;
+					font-weight: 700;
+					color: $accentColor;
+					}
+				p {
+					color: #333333;
+					font-family: 'Lato', sans-serif;
+					font-size: 14px;
+					font-weight: 400;
+				}
+				.read-button {
+					p {	
+						text-align: center;
+						font-family: 'Open Sans', sans-serif;
+						font-size: 18px;
+						font-weight: 700;		
+						margin:50px 0 5px 0;
+						padding:10px 10px 10px 10px;
+						border-style: solid none;
+						border-width:1px;
+					
+					&:hover{
+							text-decoration: none;	
+							 color: #fff;
+							 background: #777;
+						     transition: all 0.5s ease;
+						     border-color: #777;
+
+							}
+						}
+					}
+				}
+			}
+
+
+@mixin blogImage {
+		width:510px;
+		height:320px;
+		background-size: cover;
+		margin: 15px 0 15px 0!important;
+		padding: 0 !important;
+}
+ 
+.blog-image-container-1 {
+	@include blogImage;
+	background: url('../images/blog1.jpg');
+
+}
+
+.blog-image-container-2 {
+	@include blogImage;
+	background: url('../images/blog2.jpg');
+}
+
