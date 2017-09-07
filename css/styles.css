@@ -339,6 +339,7 @@ nav.scrolled {
   width: 510px;
   height: 320px;
   background-size: cover;
+  background-repeat: no-repeat;
   margin: 15px 0 15px 0 !important;
   padding: 0 !important;
   background: url("../images/blog1.jpg"); }
@@ -347,6 +348,7 @@ nav.scrolled {
   width: 510px;
   height: 320px;
   background-size: cover;
+  background-repeat: no-repeat;
   margin: 15px 0 15px 0 !important;
   padding: 0 !important;
   background: url("../images/blog2.jpg"); }
@@ -591,7 +593,13 @@ footer {
     border: none !important; }
     .navbar-toggle:active, .navbar-toggle:hover, .navbar-toggle:visited, .navbar-toggle:focus {
       background: none !important;
-      border: none !important; } }
+      border: none !important; }
+
+  .blog-image-container-1 {
+    background-size: cover; }
+
+  .blog-image-container-2 {
+    background-size: cover; } }
 @media (max-width: 575px) {
   .products-section {
     margin: 0 0 0 0 !important;
@@ -646,6 +654,24 @@ footer {
     font-size: 0.9em !important; }
 
   footer {
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .blog-image-container-1 {
+    background-size: cover; }
+
+  .blog-image-container-2 {
+    background-size: cover; } }
+@media (max-width: 400px) {
+  .blog p {
+    font-size: 0.8em !important; }
+
+  .sizes {
+    font-size: 0.8em; }
+
+  .blog-image-container-1 {
+    background-size: cover; }
+
+  .blog-image-container-2 {
+    background-size: cover; } }
 
 /*# sourceMappingURL=styles.css.map */

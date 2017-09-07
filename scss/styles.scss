@@ -401,6 +401,7 @@ nav.scrolled {
 		width:510px;
 		height:320px;
 		background-size: cover;
+		background-repeat: no-repeat;
 		margin: 15px 0 15px 0!important;
 		padding: 0 !important;
 }
@@ -687,6 +688,13 @@ footer {
 							border: none !important;
 						}
 		}
+				.blog-image-container-1 {
+			background-size:cover;
+		}
+
+				.blog-image-container-2{
+			background-size:cover;
+		}
 	}
 
 @media (max-width: 575px) { 
@@ -771,5 +779,32 @@ footer {
 footer {
 	font-size: 12px;
 }
+		.blog-image-container-1 {
+			background-size:cover;
+		}
+
+				.blog-image-container-2{
+			background-size:cover;
+		}
 		
+}
+
+@media (max-width: 400px) { 
+		.blog {
+			p {
+		font-size: 0.8em !important;
+			}
+		}
+
+		.sizes {
+			font-size: 0.8em;
+		}
+		
+		.blog-image-container-1 {
+			background-size:cover;
+		}
+
+				.blog-image-container-2{
+			background-size:cover;
+		}
 }
