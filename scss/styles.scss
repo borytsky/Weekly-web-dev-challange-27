@@ -8,6 +8,15 @@ $accentColor: #cd2b2e;
 }
 //code
 
+hr {
+	height: 2px !important;
+	color: $accentColor !important;
+	background: $accentColor;
+	border:none;
+	width:100px;
+	margin: auto;
+}
+
 
  nav {	
  	width: 100%;
@@ -250,10 +259,10 @@ nav.scrolled {
 			@include promoText;
 		}
 		hr{ 
-			align: center !important;
 			margin: 10px auto 10px auto !important;
 			width: 100px !important;
-			border-top: 2px solid #fff !important;
+			border-top: none;
+			background: #fff;
 		}
 		    	 &:hover {
 			@include productAnimation;
@@ -276,10 +285,10 @@ nav.scrolled {
 		}
 
 		hr{ 
-			align: center !important;
 			margin: 10px auto 10px auto !important;
 			width: 100px !important;
-			border-top: 2px solid #fff !important;
+			border-top: none;
+			background: #fff;
 		}
 		    	 &:hover {
 			@include productAnimation;
@@ -330,6 +339,9 @@ nav.scrolled {
 			font-size: 18px;
 			font-weight: 400;
 		}
+		hr {
+			margin: 0 !important;
+		}
 	}
 
 	.sizes {	
@@ -372,6 +384,11 @@ nav.scrolled {
 					font-size: 14px;
 					font-weight: 400;
 				}
+						hr {
+			margin: 0 !important;
+			background: #777;
+			height: 1px !important;
+		}
 				.read-button {
 					p {	
 						text-align: center;
@@ -601,7 +618,7 @@ footer {
 			min-width: 96% !important;
 			max-width: 100% !important;
 			p {
-				margin:0px !important;
+				margin-top: 150px !important;
 				padding:0px !important;
 			}
 	}
@@ -610,7 +627,7 @@ footer {
 			min-width: 96% !important;
 			max-width: 100% !important;
 						p {
-				margin:0px !important;
+				margin-top: 150px !important;
 				padding:0px !important;
 			}
 	}
@@ -619,7 +636,7 @@ footer {
 			min-width: 96% !important;
 			max-width: 100% !important;
 									p {
-				margin:0px !important;
+				margin-top: 150px !important;
 				padding:0px !important;
 			}
 	}
@@ -629,8 +646,12 @@ footer {
 			min-width: 96% !important;
 			max-width: 100% !important;
 									p {
-				margin:0px !important;
+				margin-top: 100px !important;
 				padding:0px !important;
+			}
+
+			hr{
+				display: none;
 			}
 	}
 
@@ -639,8 +660,11 @@ footer {
 			min-width: 96% !important;
 			max-width: 100% !important;
 									p {
-				margin:0px !important;
+				margin-top:100px !important;
 				padding:0px !important;
+			}
+			hr{
+				display: none;
 			}
 		}
 		.promo-text {
@@ -731,21 +755,23 @@ footer {
 			p {
 		margin-top: 100px !important;
 	}
-	hr {
+			hr {
 		display: none;
 	}
+
 }
 
 .promo-prod2{
 	margin-left:1.6% !important;
 	width: 90% !important;
+		hr {
+		display: none;
+	}
 }
 				p {
 		margin-top: 100px !important;
 	}
-	hr {
-		display: none;
-	}
+
 }
 
 .products-container {
